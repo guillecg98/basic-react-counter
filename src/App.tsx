@@ -1,12 +1,11 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { CounterButton } from "./components/counter-button/CounterButton";
-import { useCounter } from "./components/counter-button/useCounter";
+import { CounterSection } from "./components/counter-button/CounterSection";
+import { IncreaseCounterButton } from "./components/counter-button/IncreaseCounterButton";
+import { DecreaseCounterButton } from "./components/counter-button/DecreaseCounterButton";
 
 function App() {
-  const { state } = useCounter();
-
   return (
     <>
       <div>
@@ -18,10 +17,10 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <h2>{state}</h2>
+      <CounterSection />
       <div className="card">
-        <CounterButton action={{ type: "DECREASE" }} />
-        <CounterButton action={{ type: "INCREASE" }} />
+        <DecreaseCounterButton />
+        <IncreaseCounterButton />
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
